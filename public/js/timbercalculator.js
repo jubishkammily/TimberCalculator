@@ -88,7 +88,7 @@ function calculateCubicWoodMutty(woodId) {
 
     for (var elm in woodLines) {
         if (woodLines[elm] != "" && woodLines[elm] != null) {
-            var lenth_girth_list = woodLines[elm].split("-");
+            var lenth_girth_list = woodLines[elm].split(" ");
             resultSingle = 0;
             if (lenth_girth_list[1] >= thritySix) {
                 result36 = result36 + calculateCubicFormula(lenth_girth_list[0], lenth_girth_list[1]);
@@ -140,7 +140,7 @@ function calculateCubicWoodKambily(woodId) {
 
     for (var elm in woodLines) {
         if (woodLines[elm] != "" && woodLines[elm] != null) {
-            var lenth_girth_list = woodLines[elm].split("-");
+            var lenth_girth_list = woodLines[elm].split(" ");
             resultSingle = 0;
             if (lenth_girth_list[1] >= topLimit) {
                 var resultTemp = calculateCubicFormula(lenth_girth_list[0], lenth_girth_list[1]); 
@@ -152,11 +152,11 @@ function calculateCubicWoodKambily(woodId) {
                 result24 = result24 + resultTemp;
             }
 
-            if (lenth_girth_list[1] >= thirdLimit && lenth_girth_list[1] < secondLimit) {
+            if (lenth_girth_list[1] > thirdLimit && lenth_girth_list[1] < secondLimit) {
                 result18 = result18 + calculateCubicFormula(lenth_girth_list[0], lenth_girth_list[1]);
             }
 
-            if (lenth_girth_list[1] < thirdLimit) {
+            if (lenth_girth_list[1] <= thirdLimit) {
                 var resultTemp = calculateCubicFormula(lenth_girth_list[0], lenth_girth_list[1]); 
                 result18Less = result18Less + resultTemp;
             }
@@ -193,13 +193,13 @@ function calculateCubicWoodPala(woodId) {
 
     for (var elm in woodLines) {
         if (woodLines[elm] != "" && woodLines[elm] != null) {
-            var lenth_girth_list = woodLines[elm].split("-");
+            var lenth_girth_list = woodLines[elm].split(" ");
             resultSingle = 0;
             if (lenth_girth_list[1] >= thrity) {
                 result30 = result30 + calculateCubicFormula(lenth_girth_list[0], lenth_girth_list[1]);
             }
 
-            if (lenth_girth_list[1] >= twentyFour && lenth_girth_list[1] < thrity) {
+            if (lenth_girth_list[1] > twentyFour && lenth_girth_list[1] < thrity) {
                 result24 = result24 + calculateCubicFormula(lenth_girth_list[0], lenth_girth_list[1]);
             }
 
