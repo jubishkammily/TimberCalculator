@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+          border-collapse: collapse;
+          border-spacing: 0;
+          width: 100%;
+          border: 1px solid #ddd;
+        }
+        
+        th, td {
+          text-align: left;
+          padding: 8px;
+        }
+        
+        tr:nth-child(even){background-color: #f2f2f2}
+        </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <li><a href="/timber-calculator">Timber Calculator</a></li>
+            <li><a href="/">Shop</a></li>
+        </nav>
+    </header>
+    <main>
+        <form action="/" method="post">
+            <br>
+            <div style="overflow-x:auto;">
+                <table>
+                  <tr>
+                    <th>Mutty Wood</th>
+                    <th>Kambily Wood</th>
+                    <th>Other Wood</th>
+                </tr>
+                <tr>
+                    <td><textarea id="mutty" rows="20" cols="30"></textarea></td>
+                    <td><textarea id="kambily"rows="20" cols="30"></textarea></td>
+                    <td><textarea id="other" rows="20" cols="30"></textarea></td>
+                </tr>
+                <tr>
+                    <td><div>Total Cubic Volume </div><div id="muttytotalid"></div></td>
+                    <td><div>Total Cubic Volume </div><div id="kambilytotalid"></div></td>
+                    <td><div>Total Cubic Volume </div><div id="othertotalid"></div></td>
+                </tr>
+            </table>
+          </div>
+        </form>
+    </main>
+</body>
+</html>

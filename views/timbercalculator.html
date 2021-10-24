@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            margin: 10px;
+        }
+
+        .same-line {
+            display: inline-block
+        }
+
+        .first {
+            width: 25%;
+            display: inline-block;
+            /* background-color: green; */
+        }
+
+        .second {
+            width: 25%;
+            display: inline-block;
+            /* background-color: blue; */
+        }
+
+        .third {
+            width: 25%;
+            display: inline-block;
+            /* background-color: yellow; */
+        }
+
+        @media screen and (max-width: 500px) {
+
+            .first,
+            .second,
+            .third {
+                width: 70%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <main>
+        <form action="/" method="post">
+            <br>
+            <div>
+                <div class="first">
+                    <h4>Mutty Wood</h4>
+                    <textarea id="muttyareaid" rows="20" cols="25"></textarea>
+                    <div>
+                        <div class="same-line">Total Cubic Volume </div>
+                        <div class="same-line" id="muttytotalid">3</div>
+                    </div>
+                </div>
+                <div class="second">
+                    <h4>Kambily Wood</h4>
+                    <textarea id="kambilyareaid" rows="20" cols="25"></textarea>
+                    <div>
+                        <div class="same-line">Total Cubic Volume </div>
+                        <div class="same-line" id="kambilytotalid">3</div>
+                    </div>
+                </div>
+                <div class="third">
+                    <h4>Pala Wood</h4>
+                    <textarea id="palaareaid" rows="20" cols="25"></textarea>
+                    <div>
+                        <div class="same-line">Total Cubic Volume </div>
+                        <div class="same-line" id="palatotalid">3</div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <table>
+
+                    <tr>
+                        <td><input type="button" name="CalculateTotalCubic" value="Calculate Total Cubic"
+                                onclick="calculateTotalCubic()"></td>
+                        <td>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td><label>Mutty Price</label></td>
+                        <td><input type="text" id="muttypriceid"></td>
+                    </tr>
+                    <tr>
+                        <td><label>Kambily Price</label></td>
+                        <td><input type="text" id="kambilypriceid"></td>
+                    </tr>
+                    <tr>
+                        <td><label>Other Price</label></td>
+                        <td><input type="text" id="palapriceid"></td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" name="CalculateTotalPrice" value="Calculate Total Price"
+                                onclick="test()"></td>
+                        <td>
+                            <div id="totalPriceId">0</div>
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+        </form>
+    </main>
+</body>
+<script src="/js/timbercalculator.js"></script>
+
+</html>
