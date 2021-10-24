@@ -41,6 +41,8 @@
                 width: 70%;
             }
         }
+
+      
     </style>
 </head>
 
@@ -51,31 +53,71 @@
     <main>
         <form action="/" method="post">
             <br>
-            <div>
+            <div class="">
                 <h5>Format(Length-Girth)</h5>
                 <div class="first">
                     <h4>Mutty Wood</h4>
                     
                     <textarea id="muttyareaid" rows="20" cols="25"></textarea>
+
+                    
                     <div>
-                        <div class="same-line">Total Cubic Volume </div>
-                        <div class="same-line" id="muttytotalid">3</div>
+                        <div class="same-line">Vol 36 = </div>
+                        <div class="same-line" id="muttytotalid36">0</div>
+                    </div>
+                    <div>
+                        <div class="same-line">Vol 24 = </div>
+                        <div class="same-line" id="muttytotalid24">0</div>
+                    </div>
+                    <div>
+                        <div class="same-line">Vol 15 = </div>
+                        <div class="same-line" id="muttytotalid15">0</div>
+                    </div>
+                    <div>
+                        <div class="same-line"> = </div>
+                        <div class="same-line" id="muttytotalid15less">0</div>
                     </div>
                 </div>
                 <div class="second">
                     <h4>Kambily Wood</h4>
                     <textarea id="kambilyareaid" rows="20" cols="25"></textarea>
                     <div>
-                        <div class="same-line">Total Cubic Volume </div>
-                        <div class="same-line" id="kambilytotalid">3</div>
+                        <div class="same-line">Vol 30 = </div>
+                        <div class="same-line" id="kambilytotalid30">0</div>
+                    </div>
+                    <div>
+                        <div class="same-line">Vol 24 = </div>
+                        <div class="same-line" id="kambilytotalid24">0</div>
+                    </div>
+                    <div>
+                        <div class="same-line">Vol 18 = </div>
+                        <div class="same-line" id="kambilytotalid18">0</div>
+                    </div>
+                    <div>
+                        <div class="same-line">Vol less than 18 = </div>
+                        <div class="same-line" id="kambilytotalid18Less">0</div>
                     </div>
                 </div>
                 <div class="third">
                     <h4>Pala Wood</h4>
                     <textarea id="palaareaid" rows="20" cols="25"></textarea>
                     <div>
-                        <div class="same-line">Total Cubic Volume </div>
-                        <div class="same-line" id="palatotalid">3</div>
+                        <div>
+                            <div class="same-line">Vol 30 = </div>
+                            <div class="same-line" id="palatotalid30">0</div>
+                        </div>
+                        <div>
+                            <div class="same-line">Vol 24 = </div>
+                            <div class="same-line" id="palatotalid24">0</div>
+                        </div>
+                        <div>
+                            <div class="same-line">Vol Less than 24 = </div>
+                            <div class="same-line" id="palatotalid24Less">0</div>
+                        </div>
+                        <div>
+                            <div class="same-line"> = </div>
+                            <div class="same-line" id="palatotalidNone">0</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -94,22 +136,39 @@
                     </tr>
                     <tr>
                         <td><label>Mutty Price</label></td>
-                        <td><input type="text" id="muttypriceid"></td>
+                        <td><label> Girth >= 36 </label></td>
+                        <td><input size="4" type="text" id="muttypriceid36" value="360"></td>
+                        <td><label> 36 > Girth >= 24 </label></td>
+                        <td><input size="4" type="text" id="muttypriceid24" value="280"></td>
+                        <td><label> 24 >=Girth >= 15 </label></td>
+                        <td><input size="4" type="text" id="muttypriceid15" value="190"></td>
                     </tr>
                     <tr>
                         <td><label>Kambily Price</label></td>
-                        <td><input type="text" id="kambilypriceid"></td>
+                        <td><label> Girth >= 30 </label></td>
+                        <td><input size="4" type="text" id="kambilypriceid30" value="280"></td>
+                        <td><label> 30 > Girth >= 24 </label></td>
+                        <td><input size="4" type="text" id="kambilypriceid24" value="250"></td>
+                        <td><label> 24 > Girth >= 18 </label></td>
+                        <td><input size="4" type="text" id="kambilypriceid18" value="220"></td>
+                        <td><label> Girth < 18 </label></td>
+                        <td><input size="4" type="text" id="kambilypriceid18Less" value="130"></td>
                     </tr>
                     <tr>
-                        <td><label>Other Price</label></td>
-                        <td><input type="text" id="palapriceid"></td>
+                        <td><label>Pala Price</label></td>
+                        <td><label> Girth >=30  </label></td>
+                        <td><input size="4" type="text" id="palapriceid30" value="280"></td>
+                        <td><label> 30 >Girth >= 24 </label></td>
+                        <td><input size="4" type="text" id="palapriceid24" value="280"></td>
+                        <td><label> Girth < 24 </label></td>
+                        <td><input size="4" type="text" id="palapriceid24Less" value="190"></td>
                     </tr>
                     <tr>
                         <td>&nbsp;</td>
                     </tr>
                     <tr>
                         <td><input type="button" name="CalculateTotalPrice" value="Calculate Total Price"
-                                onclick="test()"></td>
+                                onclick="calculateTotalPrice()"></td>
                         <td>
                             <div id="totalPriceId">0</div>
                         </td>
