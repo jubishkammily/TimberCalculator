@@ -132,6 +132,13 @@
                         </td>
                     </tr>
                     <tr>
+                        <td><input type="button" name="CalculateTotalPrice" value="Calculate Total Price"
+                                onclick="calculateTotalPrice()"></td>
+                        <td>
+                            <div id="totalPriceId">0</div>
+                        </td>
+                    </tr>
+                    <tr>
                         <td>&nbsp;</td>
                     </tr>
                     <tr>
@@ -157,22 +164,16 @@
                     <tr>
                         <td><label>Pala Price</label></td>
                         <td><label> Girth >=30  </label></td>
-                        <td><input size="4" type="text" id="palapriceid30" value="280"></td>
+                        <td><input size="4" type="text" id="palapriceid30" value="240"></td>
                         <td><label> 30 >Girth >= 24 </label></td>
-                        <td><input size="4" type="text" id="palapriceid24" value="280"></td>
+                        <td><input size="4" type="text" id="palapriceid24" value="210"></td>
                         <td><label> Girth < 24 </label></td>
-                        <td><input size="4" type="text" id="palapriceid24Less" value="190"></td>
+                        <td><input size="4" type="text" id="palapriceid24Less" value="150"></td>
                     </tr>
                     <tr>
                         <td>&nbsp;</td>
                     </tr>
-                    <tr>
-                        <td><input type="button" name="CalculateTotalPrice" value="Calculate Total Price"
-                                onclick="calculateTotalPrice()"></td>
-                        <td>
-                            <div id="totalPriceId">0</div>
-                        </td>
-                    </tr>
+                    
                 </table>
 
             </div>

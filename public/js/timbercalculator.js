@@ -204,7 +204,10 @@ function calculateCubicWoodPala(woodId) {
             }
 
             if (lenth_girth_list[1] <= twentyFour) {
-                result24Less = result24Less + calculateCubicFormula(lenth_girth_list[0], lenth_girth_list[1]);
+                var resultTemp = calculateCubicFormula(lenth_girth_list[0], lenth_girth_list[1]);
+                console.log("val",lenth_girth_list[0]," ",lenth_girth_list[1])
+                console.log("pala ",resultTemp);
+                result24Less = result24Less + resultTemp;
             }
         }
     }
@@ -254,11 +257,11 @@ function calculateTotalPrice() {
     var pala30BasePrice = parseFloat(document.getElementById('palapriceid30').value)
     var pala30CubicPrice = parseFloat(document.getElementById('palatotalid30').innerHTML) * pala30BasePrice;
 
-    var pala24BasePrice = parseFloat(document.getElementById('kambilypriceid24').value)
+    var pala24BasePrice = parseFloat(document.getElementById('palapriceid24').value)
     var pala24CubicPrice = parseFloat(document.getElementById('palatotalid24').innerHTML) * pala24BasePrice;
   
 
-    var pala18BasePrice = parseFloat(document.getElementById('kambilypriceid18').value)
+    var pala18BasePrice = parseFloat(document.getElementById('palapriceid24Less').value)
     var pala18CubicPrice = parseFloat(document.getElementById('palatotalid24Less').innerHTML) * pala18BasePrice;
 
     
