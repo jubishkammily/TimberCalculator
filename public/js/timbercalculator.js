@@ -2,7 +2,7 @@ function calculateTotalCubic(){
     
     console.log("test");
     var mutty = calculateCubicWood('muttyareaid');
-    document.getElementById('muttytotalid').innerHTML = result;
+    document.getElementById('muttytotalid').innerHTML = mutty;
     var kambily = calculateCubicWood('kambilyareaid');
     document.getElementById('kambilytotalid').innerHTML = kambily;
     var pala = calculateCubicWood('palaareaid');

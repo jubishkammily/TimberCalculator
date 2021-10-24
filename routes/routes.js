@@ -17,7 +17,7 @@ router.get('/timber-calculator',(req,res,next)=>{
 
 router.get('/',(req,res,next)=>{
     console.log('In the Middleware');
-    res.sendFile(path.join(__dirname,'../','views','timbermain.html'))
+    res.sendFile(path.join(__dirname,'../','views','timbercalculator.html'))
  }); 
 
 router.post('/product', (req, res, next) => {
