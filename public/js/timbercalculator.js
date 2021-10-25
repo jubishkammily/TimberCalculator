@@ -76,12 +76,13 @@ function setUIWithPalaVol(pala) {
 
 function calculateCubicWoodMutty(woodId) {
 
+    var fourtytwo = 42;
     var thritySix = 36;
     var twentyFour = 24;
     var fifteen = 15;
 
     var woodLines = document.getElementById(woodId).value.split('\n');
-    var result = 0;
+    var result42 = 0;
     var result36 = 0;
     var result24 = 0;
     var result15 = 0;
@@ -90,7 +91,11 @@ function calculateCubicWoodMutty(woodId) {
         if (woodLines[elm] != "" && woodLines[elm] != null) {
             var lenth_girth_list = woodLines[elm].split(" ");
             resultSingle = 0;
-            if (lenth_girth_list[1] >= thritySix) {
+
+             if (lenth_girth_list[1] >= fourtytwo) {
+                result42 = result42 + calculateCubicFormula(lenth_girth_list[0], lenth_girth_list[1]);
+            }
+            if (lenth_girth_list[1] >= thritySix && lenth_girth_list[1] < fourtytwo) {
                 result36 = result36 + calculateCubicFormula(lenth_girth_list[0], lenth_girth_list[1]);
             }
 
@@ -104,15 +109,19 @@ function calculateCubicWoodMutty(woodId) {
         }
     }
 
+    result42 = Math.round(result36 * 10) / 10;
     result36 = Math.round(result36 * 10) / 10;
     result24 = Math.round(result24 * 10) / 10;
     result15 = Math.round(result15 * 10) / 10
 
     var resultObject = {
+        "fourtytwo": result42,
         "thirtySix": result36,
         "twentyFour": result24,
         "fifteen": result15,
     }
+
+    resultObject.fourtytwo = parseFloat(resultObject.fourtytwo.toFixed(2));
     resultObject.thirtySix = parseFloat(resultObject.thirtySix.toFixed(2));
     resultObject.twentyFour = parseFloat(resultObject.twentyFour.toFixed(2));
     resultObject.fifteen = parseFloat(resultObject.fifteen.toFixed(2));
@@ -228,6 +237,11 @@ function calculateCubicWoodPala(woodId) {
 
 
 function calculateTotalPrice() {
+
+    var mutty42BasePrice = parseFloat(document.getElementById('muttypriceid42').value)
+    var mutty42CubicPrice = parseFloat(document.getElementById('muttytotalid42').innerHTML) * mutty42BasePrice;
+
+
     var mutty36BasePrice = parseFloat(document.getElementById('muttypriceid36').value)
     var mutty36CubicPrice = parseFloat(document.getElementById('muttytotalid36').innerHTML) * mutty36BasePrice;
 
@@ -266,7 +280,7 @@ function calculateTotalPrice() {
 
     
 
-    var totalPrice = mutty36CubicPrice + mutty24CubicPrice + mutty15CubicPrice + kambiy30CubicPrice + 
+    var totalPrice = mutty42CubicPrice + mutty36CubicPrice + mutty24CubicPrice + mutty15CubicPrice + kambiy30CubicPrice + 
     kambiy24CubicPrice + kambiy18CubicPrice + pala30CubicPrice + pala24CubicPrice + pala18CubicPrice;
 
 
