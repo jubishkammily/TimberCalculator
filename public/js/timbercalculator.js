@@ -32,6 +32,7 @@ function setUIWithCalculatedVolumFirstStep(mutty, kambily, pala) {
 function setUIWithMuttyVOl(mutty) {
 
     try {
+        document.getElementById('muttytotalid42').innerHTML = mutty.fourtytwo;
         document.getElementById('muttytotalid36').innerHTML = mutty.thirtySix;
         document.getElementById('muttytotalid24').innerHTML = mutty.twentyFour;
         document.getElementById('muttytotalid15').innerHTML = mutty.fifteen;
@@ -96,6 +97,7 @@ function calculateCubicWoodMutty(woodId) {
                 result42 = result42 + calculateCubicFormula(lenth_girth_list[0], lenth_girth_list[1]);
             }
             if (lenth_girth_list[1] >= thritySix && lenth_girth_list[1] < fourtytwo) {
+                
                 result36 = result36 + calculateCubicFormula(lenth_girth_list[0], lenth_girth_list[1]);
             }
 
@@ -104,12 +106,14 @@ function calculateCubicWoodMutty(woodId) {
             }
 
             if (lenth_girth_list[1] >= fifteen && lenth_girth_list[1] < twentyFour) {
+                var resultTemp = calculateCubicFormula(lenth_girth_list[0], lenth_girth_list[1]);
+                console.log("Fifteen",lenth_girth_list[0],lenth_girth_list[1],resultTemp)
                 result15 = result15 + calculateCubicFormula(lenth_girth_list[0], lenth_girth_list[1]);
             }
         }
     }
 
-    result42 = Math.round(result36 * 10) / 10;
+    result42 = Math.round(result42 * 10) / 10;
     result36 = Math.round(result36 * 10) / 10;
     result24 = Math.round(result24 * 10) / 10;
     result15 = Math.round(result15 * 10) / 10
